@@ -7,6 +7,7 @@ open Microsoft.Owin.StaticFiles
 open Microsoft.Owin.FileSystems
 open WebSharper.Owin
 open System.IO
+open SiteletLib
 
 module OwinHost =
 
@@ -21,10 +22,10 @@ module OwinHost =
         use server = WebApp.Start(url, fun appB ->
 
             let httproot = Path.Combine(__SOURCE_DIRECTORY__, "httproot")
-            ()
-//            let (sitelet, meta) = sitelet httproot
-//            appB.UseStaticFiles(StaticFileOptions(FileSystem = PhysicalFileSystem(httproot))) |> ignore
-//            appB.UseCustomSitelet(Options.Create(meta), sitelet) |> ignore
+
+            let (sitelet, meta) = Main.sitelet httproot
+            appB.UseStaticFiles(StaticFileOptions(FileSystem = PhysicalFileSystem(httproot))) |> ignore
+            appB.UseCustomSitelet(Options.Create(meta), sitelet) |> ignore
         )
         stdout.WriteLine("Serving {0}", url)
         stdin.ReadLine() |> ignore

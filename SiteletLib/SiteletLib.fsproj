@@ -62,8 +62,18 @@
     <Compile Include="Main.fs" />
     <Content Include="packages.config" />
     <Content Include="app.config" />
-    <None Include="References.fsx" />
-    <None Include="WebPartPage.fsx" />
+    <None Include="References.fsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="WebPartPage.fsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="FSharp.Core.optdata">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="FSharp.Core.sigdata">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FSharp.Compiler.Service">
