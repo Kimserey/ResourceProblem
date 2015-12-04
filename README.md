@@ -1,4 +1,4 @@
-# ResourceProblem
+# WebSharper resource problem
 
 Attempt to solve the BaseResource issue.
 
@@ -25,4 +25,4 @@ When a BaseResource is not present in the .fsx file, all Rpc calls will not work
     WRN: Assembly binding logging is turned OFF.
     To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
     Note: There is some performance penalty associated with assembly bind failure logging.
-To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+    To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
