@@ -1,6 +1,6 @@
 # WebSharper resource problem
 
-Attempt to solve the "Rpc calls not working when BaseResource is not present in fsx" issue.
+Attempt to solve the ["Rpc calls not working when BaseResource is not present in fsx"](http://websharper.com/question/80870/rpc-not-working-from-fsx-when-a-baseresource-is-not-present-in-the-fsx) issue.
 
 When a BaseResource is not present in the .fsx file, all Rpc calls will not work and yield the following error:
 
