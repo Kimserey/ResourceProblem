@@ -20,7 +20,7 @@ module ShellPage =
         open WebSharper.UI.Next.Client
     
         let main() =
-            divAttr [attr.style "background-color: blue;"] [
+            divAttr [attr.style "background-color: grey;"] [
                 text "Some navbar here"
                 Doc.Button "Test" [] (fun () -> 
                     async { 

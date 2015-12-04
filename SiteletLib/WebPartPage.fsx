@@ -12,14 +12,14 @@ open WebSharper.Resources
 // Comment here this section
 // This section add a bootstrap link in the header of the page
 // If this section is commented, the RPC in this file will not work anymore
-//module Resources =
-//    
-//    type BootstrapResource() =
-//        inherit BaseResource("//maxcdn.bootstrapcdn.com/bootstrap/3.3.5", "css/bootstrap.min.css")
-//
-//    [<assembly:Require(typeof<BootstrapResource>)>]
-//    do()
-// <-------------------->
+module Resources =
+    
+    type BootstrapResource() =
+        inherit BaseResource("//maxcdn.bootstrapcdn.com/bootstrap/3.3.5", "css/bootstrap.min.css")
+
+    [<assembly:Require(typeof<BootstrapResource>)>]
+    do()
+// <---------------------------------------------------------------------->
 
 module WebPartPage =
 
@@ -34,7 +34,9 @@ module WebPartPage =
     module Client =
         open WebSharper.JavaScript
         open WebSharper.UI.Next.Client
-    
+        
+        let styledDiv = divAttr [ attr.style "margin:10px;padding:10px;border:solid 1px black;" ]
+
         let showAlert() = 
             async {
                 let! msg = Server.test()
@@ -42,11 +44,11 @@ module WebPartPage =
             } 
 
         let main() =
-            div [ h1 [text "Web part"]
-                  div [ Doc.Button "Test" [] (fun () -> showAlert() |> Async.Start) ] ]
+            styledDiv [ h1 [text "Web part"]; h2 [text "Main"]
+                        div [ Doc.Button "Test" [] (fun () -> showAlert() |> Async.Start) ] ]
 
         let inspections() =
-            div [text "Inspections"]
+            styledDiv [ h1 [text "Web part"]; h2 [text "Inspections"]]
 
     module Site =
         open WebSharper.UI.Next.Server

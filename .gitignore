@@ -3,3 +3,4 @@ OwinHost/obj/*
 packages/*
 SiteletLib/bin/*
 SiteletLib/obj/*
+OwinHost/httproot/*

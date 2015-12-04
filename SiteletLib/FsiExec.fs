@@ -39,7 +39,7 @@ module FsiExec =
                 Paths.getBaseDirDll "WebSharper.Main"
                 Paths.getBaseDirDll "WebSharper.Web"
                 Paths.getBaseDirDll "WebSharper.Sitelets"
-                Paths.getBaseDirDll "SelfHostSitelet"
+                Paths.getBaseDirDll "SiteletLib"
             ]
 
             fsiSession.EvalScript(filename)
