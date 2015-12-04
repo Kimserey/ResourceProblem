@@ -12,13 +12,13 @@ open WebSharper.Resources
 // Comment here this section
 // This section add a bootstrap link in the header of the page
 // If this section is commented, the RPC in this file will not work anymore
-module Resources =
-    
-    type BootstrapResource() =
-        inherit BaseResource("//maxcdn.bootstrapcdn.com/bootstrap/3.3.5", "css/bootstrap.min.css")
-
-    [<assembly:Require(typeof<BootstrapResource>)>]
-    do()
+//module Resources =
+//    
+//    type BootstrapResource() =
+//        inherit BaseResource("//maxcdn.bootstrapcdn.com/bootstrap/3.3.5", "css/bootstrap.min.css")
+//
+//    [<assembly:Require(typeof<BootstrapResource>)>]
+//    do()
 // <---------------------------------------------------------------------->
 
 module WebPartPage =
